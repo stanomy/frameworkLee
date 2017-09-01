@@ -1,0 +1,39 @@
+server:
+  port: 9002
+
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://127.0.0.1:27017/test
+
+#druid配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mongodb.Mongo
+    #貌似这个没效果，改端口和数据库，都没用
+    url: mongodb://127.0.0.1:27017/test
+    #druid
+    initialSize: 10
+    maxActive: 50
+    minIdle: 5
+    maxWait: 5000
+
+  #activemq
+  activemq:
+    broker-url: tcp://192.168.1.114:61616
+    user:
+    password:
+#    in-memory:true
+#    pool:
+#      enabled:false
+
+#
+#
+#
+##好像监控不用配置，或者没找到配置的方式
+#
+##web-stat-filter:
+# #       enabled:
+#
+#
